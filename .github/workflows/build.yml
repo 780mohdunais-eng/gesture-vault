@@ -12,7 +12,7 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
       - run: chmod +x GestureVault/gradlew || true
-      - run: cd GestureVault && gradle wrapper
+      - run: cd GestureVault && gradle wrapper --gradle-version 8.4
       - run: cd GestureVault && ./gradlew assembleDebug
       - uses: actions/upload-artifact@v4
         with:
